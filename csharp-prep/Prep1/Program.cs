@@ -6,12 +6,7 @@ class Program
 {
     static void Main(string[] args)
     {
-        // Console.WriteLine("Hello Prep1 World!");
-        // Console.Write("There will not be a newline after this.");
-        // Console.Write("what is your Favorite color?");
-        // string color = Console.ReadLine();
-        // string school = "BYU-Idaho";
-        // Console.WriteLine($"I am studing at {school}");
+    
 
         Console.WriteLine("what is your first name? ");
         string firstName = Console.ReadLine();
