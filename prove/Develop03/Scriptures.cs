@@ -1,3 +1,5 @@
+using System.Diagnostics.Contracts;
+
 class Scriptures
 {
     private Reference _reference;
@@ -17,12 +19,12 @@ class Scriptures
 
     public void DisplayScripture()
     {
-        string scripture = _reference.GetReference() + " ";
+        string scripture = _reference.DisplayReference() + " ";
         foreach (Word word in _words)
         {
             scripture += word.GetWord() + " ";
         }
-        Console.WriteLine($"{_reference.GetReference()} {scripture}");
+        Console.WriteLine($"{_reference.DisplayReference()} {scripture}");
     }
 
     public void HideRandomWord()
@@ -38,7 +40,7 @@ class Scriptures
         }
     }
 
-    public bool AreAllWordsHidden()
+    public bool AllWordsHidden()
     {
         foreach (Word word in _words)
         {
