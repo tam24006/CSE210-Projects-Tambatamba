@@ -16,8 +16,7 @@ class Program
             "Think of a time when you achieved a personal goal or milestone.",
         };
 
-        // Correct the variable name and ensure it matches the list defined above
-        // Ensure the Prompts class constructor matches the expected argument type
+        
         Prompts reflectionPromptsObject = new Prompts(reflectionPrompts);
 
         List<string> reflectionQuestions = new List<string>()
@@ -42,8 +41,8 @@ class Program
         };
         Prompts listingPromptsObject = new Prompts(listingPrompts);
         BreathingAcivity b1 = new BreathingAcivity(4, 6, "Breathing Activity", "This activity will help you relax by walking you through breathing in and out slowly. Clear your mind and focus on your breathing.");
-        ReflectionActivity r1 = new ReflectionActivity(reflectionPrompts, reflectionQuestions, "Reflection Activity", "This activity will help you reflect on times in your life when you have shown strength and resilience. This will help you recognize the power you have and how you can use it in other aspects of your life.");
-        ListingActivity l1 = new ListingActivity(listingPrompts, "Listing Activity", "This activity will help you reflect on the good things in your life by having you list as many things as you can in a certain area.");
+        ReflectionActivity r1 = new ReflectionActivity(reflectionPromptsObject, reflectionQuestions, "Reflection Activity", "This activity will help you reflect on times in your life when you have shown strength and resilience. This will help you recognize the power you have and how you can use it in other aspects of your life.");
+        ListingActivity l1 = new ListingActivity(listingPromptsObject, "Listing Activity", "This activity will help you reflect on the good things in your life by having you list as many things as you can in a certain area.");
 
         while (running)
         {

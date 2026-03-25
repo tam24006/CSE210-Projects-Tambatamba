@@ -4,9 +4,10 @@ public class ReflectionActivity : Activity
 {
     private Prompts _prompts;
     private List<string> _questions;
-    public ReflectionActivity(ParallelMergeOptions prompts, List<string> questions, string name, string welcome)
+    public ReflectionActivity(Prompts prompts, List<string> questions, string name, string welcome)
+        : base(name, welcome)
     {
-        _prompts = ParallelMergeOptions;
+        _prompts = prompts; 
         _questions = questions;
     }
     public void DisplayRandomprompts()
