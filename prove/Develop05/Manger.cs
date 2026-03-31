@@ -1,10 +1,10 @@
 public class Manager
 {
-    private List<goal> _goals = new List<goal>();
-    private List<goal> _completedGoals= new List<goal>();
+    private List<Goal> _goals = new List<Goal>();
+    private List<Goal> _completedGoals= new List<Goal>();
     private int _totalPoints = 0;
 
-    public Manager(List<goal> goals)
+    public Manager(List<Goal> goals)
     {
         _goals = goals;
     }
@@ -35,7 +35,7 @@ public class Manager
         }
         else if (answer == "2")
         {
-            eternal eg = new eternal(name, description, point, "Eternal Goal");
+            Eternal eg = new Eternal(name, description, point, "Eternal Goal");
             _goals.Add(eg);
 
         }
@@ -78,7 +78,7 @@ public class Manager
         using (StreamWriter outputFile = new StreamWriter(filename))
         {
             outputFile.WriteLine(_totalPoints);
-            foreach (goal g in _goals)
+            foreach (Goal g in _goals)
             {
                 outputFile.WriteLine(g.SaveGoal());
             }
@@ -128,7 +128,7 @@ public class Manager
             }
             else if (goalType == "Eternal Goal")
             {
-                eternal eg = new eternal(name, description, point, "Eternal Goal");
+                Eternal eg = new Eternal(name, description, point, "Eternal Goal");
                 _goals.Add(eg);
             }
             else
@@ -157,7 +157,7 @@ public class Manager
         string answer = Console.ReadLine();
         int index = int.Parse(answer) - 1;
 
-        goal g = _goals[index];
+        Goal g = _goals[index];
         int pointEarned = g.RecordEvent();
         _totalPoints += pointEarned;
 
@@ -169,7 +169,7 @@ public class Manager
     {
         _completedGoals.Clear();
 
-        foreach (goal g in _goals)
+        foreach (Goal g in _goals)
         {
             if (g.GetStatus())
             {
@@ -194,7 +194,7 @@ public class Manager
             string answer = Console.ReadLine();
             int index = int.Parse(answer) - 1;
 
-            goal g = _completedGoals[index];
+            Goal g = _completedGoals[index];
             g.ResetGoal();
             Console.WriteLine($"Goal '{g.GetName()}' has been reset.");
         }

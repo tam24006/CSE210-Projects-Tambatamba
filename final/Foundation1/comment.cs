@@ -12,7 +12,7 @@ public class _comment
 
     public void DisplayComment()
     {
-        Console.WriteLine(${ _text} by { _comments});
+        Console.WriteLine($"{ _text} by { _comments}");
         
     }
 

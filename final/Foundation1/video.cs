@@ -1,14 +1,14 @@
 
 using System.Transactions;
 
-public class video 
+public class Video 
 {
     public string _title;
     public string _author;
     public int _length;
     public List<_comment> _comments;
 
-    public video(string title, string author, int length, List<_comment> comments)
+    public Video(string title, string author, int length, List<_comment> comments)
 
 
     {

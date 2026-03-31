@@ -1,6 +1,6 @@
 using System.Xml.Linq;
 
-public abstract class goal
+public abstract class Goal
 {
     protected string _name;
     protected string _description;
@@ -8,7 +8,7 @@ public abstract class goal
     protected string _goalType;
     protected bool _isCompleted = false;
 
-    public goal(string name, string description, int point, string type)
+    public Goal(string name, string description, int point, string type)
     {
         _name = name;
         _description = description;
@@ -17,7 +17,7 @@ public abstract class goal
     }
     public virtual void DisplayGoal()
     {
-        Console.WriteLine($"[ ] {_name} ({_deseription})");
+        Console.WriteLine($"[ ] {_name} ({_description})");
 
     }
     public string GetName()
