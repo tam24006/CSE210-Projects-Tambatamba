@@ -30,7 +30,7 @@ public class Manager
 
         if (answer == "1")
         {
-            simple sg = new simple(name, description, point, "Simple Goal");
+            Simple sg = new Simple(name, description, point, "Simple Goal");
             _goals.Add(sg);
         }
         else if (answer == "2")
@@ -49,7 +49,7 @@ public class Manager
             string bonus = Console.ReadLine();
             int bonusPoint = int.Parse(bonus);
 
-            checklistActivity cg = new checklistActivity(timeToComplete, bonusPoint, name, description, point, "Checklist Goal");
+            ChecklistActivity cg = new ChecklistActivity(timeToComplete, bonusPoint, name, description, point, "Checklist Goal");
             _goals.Add(cg);
         }
         else
@@ -122,7 +122,7 @@ public class Manager
             if (goalType == "Simple Goal")
             {
                 bool status = bool.Parse(parts[4].Trim());
-                simple sg = new simple(name, description, point, "Simple Goal");
+                Simple sg = new Simple(name, description, point, "Simple Goal");
                 sg.SetStatus(status);
                 _goals.Add(sg);
             }
@@ -136,7 +136,7 @@ public class Manager
                 int bonusPoint = int.Parse(parts[4].Trim());
                 int timeToComplete = int.Parse(parts[5].Trim());
                 int timeDone = int.Parse(parts[6].Trim());
-                checklistActivity cg = new checklistActivity(timeToComplete, bonusPoint, name, description, point, "Checklist Goal");
+                ChecklistActivity cg = new ChecklistActivity(timeToComplete, bonusPoint, name, description, point, "Checklist Goal");
                 cg.SetTimeDone(timeDone);
                 _goals.Add(cg);
 

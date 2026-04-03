@@ -2,19 +2,19 @@ using System.Diagnostics;
 using System.Drawing;
 using System.Security.Cryptography.X509Certificates;
 
-public class checklistActivity : Activity
+public class ChecklistActivity : Goal
 {
     private int _timeToComplete;
     private int _bonusPoints;
     private int _timeDone;
 
-    public checklistActivity(string name, string description, int point, string type) : base(name, description, point, type)
+    public ChecklistActivity(int timeToComplete, int bonusPoints, string name, string description, int point, string type) : base(name, description, point, type)
     {
         _timeToComplete = timeToComplete;
         _bonusPoints = bonusPoints;
         _timeDone = 0;
     }
-    public override void DisplayGoals()
+    public override void DisplayGoal()
     {
         if (_isCompleted == false)
         {
@@ -65,6 +65,12 @@ public class checklistActivity : Activity
                 return _point + _bonusPoints;
             }
         }
+        else
+        {
+            return 0;
+        }
+    
+    
     }
     public override void ResetGoal()
     {

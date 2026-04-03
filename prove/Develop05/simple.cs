@@ -1,6 +1,6 @@
-public class simple : goal
+public class Simple : Goal
 {
-    public simple(string name, string _description, int point, string type) : base(name, _description, point, type)
+    public Simple(string name, string _description, int point, string type) : base(name, _description, point, type)
     {
 
     }

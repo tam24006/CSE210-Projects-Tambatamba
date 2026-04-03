@@ -24,12 +24,12 @@ public class Activity
     {
         return 1;
     }
-        public virtual double GetPace()
-        {
-            return 1;
-        }
-        public string GetSummary()
-        {
-            return $"{_date} {_type} ({_length} min) - Distance: {GetDistance()} km, Speed: {GetSpeed()} kph, Pace: {GetPace()} min per km";
-        }
+    public virtual double GetPace()
+    {
+        return 1;
+    }
+    public string GetSummary()
+    {
+        return $"{_date} {_type} ({_length} min) - Distance: {GetDistance()} km, Speed: {GetSpeed()} kph, Pace: {GetPace()} min per km";
+    }
 }
